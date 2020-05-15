@@ -1,4 +1,4 @@
-var data = [{
+var Data = [{
     datetime: "1/1/2010",
     city: "benton",
     state: "ar",

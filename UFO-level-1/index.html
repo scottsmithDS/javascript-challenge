@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="index.html">UFO Sightings
-            <img class="nav-ufo" src="static/images/ufo.svg">
+            <img class="nav-ufo" src="images/ufo.svg">
           </a>
         </div>
       </div>
@@ -30,7 +30,7 @@
         <div class="col-md-2">
           <aside class="filters">
             <div class="panel panel-default">
-              <div class="panel-heading">Filter Search</div>
+              <div class="panel-heading">Date Search</div>
               <div class="panel-body">
                 <form>
                   <div class="form-group">
@@ -67,13 +67,92 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Advanced Search</div>
+              <div class="panel-body">
+                <form autocomplete='off' id = 'form2'>
+                  <div class="autocomplete" style="width:300xp;">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="date2">Enter a Date</label>
+                        <input class="form-control2" id="datetime2" type="text2" placeholder="1/11/2011">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="city">Enter a City</label>
+                        <input class="form-control2" id="city" type="text" placeholder="benton">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="state">Enter a State</label>
+                        <input class="form-control2" id="state" type="text" placeholder="ca">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="country">Enter a Country</label>
+                        <input class="form-control2" id="country" type="text" placeholder="us">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="shape">Enter a Shape</label>
+                        <input class="form-control2" id="shape" type="text" placeholder="triangle" list="shapelist">
+                        <datalist id="shapelist">
+                          <option>circle</option>
+                          <option>light</option>
+                          <option>triangle</option>
+                          <option>unknown</option>
+                          <option>fireball</option>
+                          <option>formation</option>
+                          <option>other</option>
+                          <option>sphere</option>
+                          <option>disk</option>
+                          <option>chevron</option>
+                          <option>rectangle</option>
+                          <option>cylinder</option>
+                          <option>cross</option>
+                          <option>flash</option>
+                          <option>changing</option>
+                          <option>oval</option>
+                          <option>cigar</option>
+                          <option>teardrop</option>
+                        </datalist>
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn2" type="button" class="btn btn-default">Filter Table</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <table id="ufo-table2" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Date</th>
+                  <th class="table-head">City</th>
+                  <th class="table-head">State</th>
+                  <th class="table-head">Country</th>
+                  <th class="table-head">Shape</th>
+                  <th class="table-head">Duration</th>
+                  <th class="table-head">Comments</th>
+                </tr>
+              </thead>
+              <tbody id="tbody2"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <span class="bottom">UFO Sightings</span>
     </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   <script src="../data.js"></script>
-  <script src="/app.js"></script>
+  <script src="app.js"></script>
+  <script src="../UFO-level-2/app2.js"></script>
 </body>
 
 </html>
